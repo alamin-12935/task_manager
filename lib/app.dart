@@ -6,7 +6,16 @@ class taskmanagerapp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData(
+        textTheme: TextTheme(
+          titleLarge: TextStyle(
+            fontSize: 28,
+            fontWeight: FontWeight.w600
+          )
+        )
+      ),
       title: 'Task manager',
+      debugShowCheckedModeBanner: false,
       home: SplashScreen(),
     );
   }
