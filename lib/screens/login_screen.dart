@@ -1,4 +1,6 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:task_manager/screens/sing_up_screen.dart';
 import 'package:task_manager/utils/app_color.dart';
 import 'package:task_manager/widgets/screen_background.dart';
 class LoginScreen extends StatefulWidget {
@@ -45,10 +47,14 @@ class _LoginScreenState extends State<LoginScreen> {
                         TextSpan(
                           text: 'Sign up', style: TextStyle(
                           color: AppColor.Pcolor
-                        )
+                        ),
+                          recognizer: TapGestureRecognizer()..onTap = (){
+                            Navigator.push(context, MaterialPageRoute(builder: (context)=>SingUpScreen()));
+                          }
                         )
                       ]
-                    ))
+                    )
+                    )
                   ],),
                 )
               ],
