@@ -1,18 +1,18 @@
-
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
 import '../utils/app_color.dart';
 import '../widgets/screen_background.dart';
+import 'forget_passwoed_pin_varify.dart';
 import 'login_screen.dart';
-class SingUpScreen extends StatefulWidget {
-  const SingUpScreen({super.key});
+class ForgetPasswordSetPassword extends StatefulWidget {
+  const ForgetPasswordSetPassword({super.key});
 
   @override
-  State<SingUpScreen> createState() => _SingUpScreenState();
+  State<ForgetPasswordSetPassword> createState() => _ForgetPasswordSetPasswordState();
 }
 
-class _SingUpScreenState extends State<SingUpScreen> {
+class _ForgetPasswordSetPasswordState extends State<ForgetPasswordSetPassword> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -23,42 +23,24 @@ class _SingUpScreenState extends State<SingUpScreen> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             SizedBox(height: 150,),
-            Text('Join With Us',style: Theme.of(context).textTheme.titleLarge),
-            SizedBox(height: 20,),
+            Text('Set Password',style: Theme.of(context).textTheme.titleLarge),
+            SizedBox(height: 25,),
             TextFormField(
               decoration: InputDecoration(
-                  hintText: 'Email'
+                  hintText: 'Password'
               ),
-            ),
-            SizedBox(height: 20),
+            ),SizedBox(height: 20),
             TextFormField(
               decoration: InputDecoration(
-                  hintText: 'First Name'
+                  hintText: 'Confirm Password'
               ),
             ),
-            SizedBox(height: 20),
-            TextFormField(
-              decoration: InputDecoration(
-                  hintText: 'Last Name'
-              ),
-            ),
-            SizedBox(height: 20),
-            TextFormField(
-              decoration: InputDecoration(
-                  hintText: 'Mobile'
-              ),
-            ),
-            SizedBox(height: 20),
-            TextFormField(
-              decoration: InputDecoration(
-                  hintText: 'password'
-              ),
-            ),
+            SizedBox(height: 25),
+            FilledButton(onPressed: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>ForgetPasswoedPinVarify()));
+            }, child: Icon(Icons.arrow_circle_right_outlined)),
 
-            SizedBox(height: 30),
-            FilledButton(onPressed: (){}, child: Icon(Icons.arrow_circle_right_outlined)),
-
-            SizedBox(height: 35,),
+            SizedBox(height: 40),
             Center(
               child: Column(children: [
                 RichText(text: TextSpan(
@@ -67,7 +49,7 @@ class _SingUpScreenState extends State<SingUpScreen> {
                       TextSpan(
                           text: 'Sign In', style: TextStyle(
                           color: AppColor.Pcolor,
-                        fontWeight: FontWeight.bold
+                          fontWeight: FontWeight.bold
                       ),
                           recognizer: TapGestureRecognizer()..onTap = (){
                             Navigator.push(context, MaterialPageRoute(builder: (context)=>LoginScreen()));
