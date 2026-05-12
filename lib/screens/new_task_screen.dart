@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+
+import '../widgets/tm_appbar.dart';
 class NewTaskScreen extends StatefulWidget {
   const NewTaskScreen({super.key});
 
@@ -9,6 +11,9 @@ class NewTaskScreen extends StatefulWidget {
 class _NewTaskScreenState extends State<NewTaskScreen> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      appBar: TmAppbar(),
+    );
   }
 }
+
