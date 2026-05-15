@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:task_manager/screens/sing_up_screen.dart';
 import 'package:task_manager/screens/splash_screen.dart';
 import 'package:task_manager/utils/app_color.dart';
 class taskmanagerapp extends StatelessWidget {

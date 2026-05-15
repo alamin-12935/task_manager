@@ -5,6 +5,7 @@ import 'package:task_manager/utils/app_color.dart';
 import 'package:task_manager/widgets/screen_background.dart';
 
 import 'forget_password_email_verification.dart';
+import 'main_nav_screen.dart';
 import 'new_task_screen.dart';
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -39,7 +40,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
                 SizedBox(height: 25,),
                 FilledButton(onPressed: (){
-                  Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>NewTaskScreen()));
+                  Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>MainNavScreen()));
                 }, child: Icon(Icons.arrow_circle_right_outlined)),
 
                 SizedBox(height: 55,),
